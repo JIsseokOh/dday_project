@@ -1,0 +1,2 @@
+pyinstaller --onefile --windowed --icon=image.ico --name="dday_widget" --uac-admin dday_widget.py
+
