@@ -26,11 +26,39 @@ A beautiful, interactive desktop widget for tracking special days with real-time
 - **Emoji Support**: Rich emoji support in messages
 - **Read Status Tracking**: Keep track of read/unread messages
 
-## Screenshots
+## Demo
 
-*Widget in compact mode displaying day counter and animated heart*
+### 🎬 Application Overview
+![D-Day Widget Demo](./media/demo.gif)
+*Complete demonstration of the D-Day widget featuring day counter, animations, and chat functionality*
 
-*Expanded chat interface showing message history and input field*
+### 📱 Widget in Action
+
+#### Compact Mode
+![Compact Widget](./media/compact-mode.gif)
+*Widget in compact mode showing day counter with animated heart and sparkle effects*
+
+#### Chat Interface
+![Chat Demo](./media/chat-demo.gif)
+*Real-time chat functionality with message exchange between users*
+
+#### Visual Effects
+![Effects Demo](./media/effects-demo.gif)
+*Animated heart, sparkle effects, and milestone celebrations*
+
+### 🖥️ Screenshots
+
+<div align="center">
+  <img src="./media/screenshot-compact.png" alt="Compact Mode" width="300"/>
+  <img src="./media/screenshot-chat.png" alt="Chat Interface" width="300"/>
+</div>
+
+*Left: Widget in compact mode | Right: Expanded chat interface*
+
+### 🎥 Video Tutorial
+
+[![Setup and Usage Tutorial](./media/video-thumbnail.png)](./media/setup-tutorial.mp4)
+*Click to watch the complete setup and usage tutorial*
 
 ## Installation
 
@@ -331,6 +359,125 @@ Change message history settings:
 if len(messages) > 5:  # Change 5 to your preferred limit
     messages = messages[-5:]
 ```
+
+## Media Files Setup
+
+### 📁 Creating Demo Content
+
+To add the demo GIFs and videos shown above, follow these steps:
+
+#### Required Media Files
+```
+media/
+├── demo.gif                 # Main application demo (10-15 seconds)
+├── compact-mode.gif         # Compact widget animation (5-8 seconds)
+├── chat-demo.gif           # Chat functionality demo (8-10 seconds)
+├── effects-demo.gif        # Visual effects showcase (6-8 seconds)
+├── screenshot-compact.png   # Static screenshot of compact mode
+├── screenshot-chat.png     # Static screenshot of chat interface
+├── video-thumbnail.png     # Thumbnail for video tutorial
+└── setup-tutorial.mp4      # Complete setup tutorial (2-5 minutes)
+```
+
+#### 🎬 Recording Guidelines
+
+**For GIF Creation:**
+1. **Tools**: Use [ScreenToGif](https://www.screentogif.com/) (Windows) or [LICEcap](https://www.cockos.com/licecap/) (Cross-platform)
+2. **Settings**: 
+   - Frame rate: 10-15 FPS
+   - Resolution: 800x600 or smaller
+   - Duration: Keep under 15 seconds
+   - File size: Aim for under 5MB per GIF
+
+**Recording Scenarios:**
+
+1. **demo.gif** - Main Demo:
+   - Start with authentication dialog
+   - Show compact widget with animations
+   - Expand to chat interface
+   - Send a few messages
+   - Show notification effects
+   - Return to compact mode
+
+2. **compact-mode.gif** - Widget Animation:
+   - Focus on the compact widget
+   - Show heart animation and color changes
+   - Include sparkle effects
+   - Demonstrate drag functionality
+
+3. **chat-demo.gif** - Chat Functionality:
+   - Show expanded chat interface
+   - Demonstrate typing and sending messages
+   - Show message history
+   - Include notification animations
+
+4. **effects-demo.gif** - Visual Effects:
+   - Capture celebration effects (milestone days)
+   - Show heart animations
+   - Demonstrate sparkle effects
+   - Include background color adaptation
+
+**For Screenshots:**
+- Use high resolution (1920x1080 or higher)
+- Crop to show only relevant parts
+- Save as PNG for better quality
+- Include both light and dark desktop backgrounds
+
+**For Video Tutorial:**
+- Use [OBS Studio](https://obsproject.com/) for recording
+- Include audio narration
+- Cover complete setup process:
+  - Firebase configuration
+  - Application installation
+  - First-time usage
+  - Feature demonstration
+- Export as MP4 with H.264 codec
+
+#### 📱 Optimization Tips
+
+**GIF Optimization:**
+```bash
+# Using gifsicle (install via npm: npm install -g gifsicle)
+gifsicle -O3 --resize-width 600 input.gif -o output.gif
+
+# Using ffmpeg for better compression
+ffmpeg -i input.gif -vf "fps=12,scale=600:-1" -loop 0 output.gif
+```
+
+**Image Optimization:**
+```bash
+# Using ImageOptim (macOS) or TinyPNG (web service)
+# Aim for balance between quality and file size
+```
+
+### 🚀 Adding Media to Repository
+
+1. **Create media folder**:
+   ```bash
+   mkdir media
+   ```
+
+2. **Add your files**:
+   ```bash
+   git add media/
+   git commit -m "Add demo GIFs and screenshots"
+   git push origin main
+   ```
+
+3. **Verify links**: Check that all media files display correctly on GitHub
+
+### 📋 Media Checklist
+
+- [ ] Record main demo GIF (demo.gif)
+- [ ] Record compact mode GIF (compact-mode.gif)
+- [ ] Record chat demo GIF (chat-demo.gif)
+- [ ] Record effects demo GIF (effects-demo.gif)
+- [ ] Take compact mode screenshot (screenshot-compact.png)
+- [ ] Take chat interface screenshot (screenshot-chat.png)
+- [ ] Create video thumbnail (video-thumbnail.png)
+- [ ] Record setup tutorial video (setup-tutorial.mp4)
+- [ ] Optimize all media files for web
+- [ ] Test all links in README.md
 
 ## Contributing
 
